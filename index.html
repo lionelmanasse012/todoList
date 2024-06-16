@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="main-container">
+            <header class="header">
+                <span class="title">TODO LIST</span>
+                <div class="add-task">
+                    <div class="search-task">
+                        <div class="search-container">
+                            <input type="text" name="search" id="search" class="search-input"
+                                placeholder="Search note...">
+                            <span class="material-symbols-outlined search-icon">
+                                search
+                            </span>
+                        </div>
+                    </div>
+
+                    <div id="selectTask" class="select-task">
+                        <div class="select-task-container">
+                            <div class="select-block">
+                                <span id="selectValue" class="select-value">All</span>
+                                <span id="arrowUp" class="material-symbols-outlined arrow-up">
+                                    keyboard_arrow_up
+                                </span>
+                                <span id="arrowDown" class="material-symbols-outlined arrow-down">
+                                    keyboard_arrow_down
+                                </span>
+                            </div>
+
+                            <ul id="selectOption" class="select-option">
+                                <li class="select-item">All</li>
+                                <li class="select-item">Complete</li>
+                                <li class="select-item">Incomplete</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mode-btn-block">
+                        <button class="mode-btn">
+                            <span class="material-symbols-outlined mode-light">
+                                light_mode
+                            </span>
+                            <span class="material-symbols-outlined mode-dark">
+                                dark_mode
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div id="listTask" class="list-task">
+                <div id="notTask" class="not-task">
+                    <img src="./assets/img/lightEmptyIcon.png" alt="Not task icon" class="light-empty-icon">
+                    <img src="./assets/img/darkEmptyIcon.png" alt="Not task icon" class="dark-empty-icon">
+                    <p>Empty...</p>
+                </div>
+
+                <ul id="tasks" class="tasks">
+                    <li class="task-item">
+                        <div class="task-label">
+                            <input type="checkbox" name="" id="label1">
+                            <label class="checkbox" for="label1">
+                                <i class="fa-solid fa-check task-check"></i>
+                            </label>
+                            <label class="task-name" for="label1">NOTE #1</label>
+                        </div>
+
+                        <div class="task-update">
+                            <span class="material-symbols-outlined task-edit">
+                                edit
+                            </span>
+                            <span class="material-symbols-outlined task-delete">
+                                delete
+                            </span>
+                        </div>
+                    </li>
+                    <li class="task-item">
+                        <div class="task-label">
+                            <input type="checkbox" name="" id="label2">
+                            <label class="checkbox" for="label2">
+                                <i class="fa-solid fa-check task-check"></i>
+                            </label>
+                            <label class="task-name" for="label2">NOTE #2</label>
+                        </div>
+
+                        <div class="task-update">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                            <span class="material-symbols-outlined">
+                                delete
+                            </span>
+                        </div>
+                    </li>
+                    <li class="task-item">
+                        <div class="task-label">
+                            <input type="checkbox" name="" id="label3">
+                            <label class="checkbox" for="label3">
+                                <i class="fa-solid fa-check task-check"></i>
+                            </label>
+                            <label class="task-name" for="label3">NOTE #3</label>
+                        </div>
+
+                        <div class="task-update">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                            <span class="material-symbols-outlined">
+                                delete
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="new-task">
+                <button class="new-task-btn">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-container">
+                <form action="" class="modal-form">
+                    <div class="input-block">
+                        <p class="modal-title">NEW NOTE</p>
+                        <input type="text" name="input-note" id="input-note" class="input-note"
+                            placeholder="Input your note...">
+                    </div>
+
+                    <div class="modal-btn">
+                        <input class="cancel" type="submit" value="CANCEL">
+                        <input class="apply" type="submit" value="APPLY">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./assets/js/selectMenu.js"></script>
+    <script src="./assets/js/mode.js"></script>
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/addNote.js"></script>
+</body>
+
+</html>
